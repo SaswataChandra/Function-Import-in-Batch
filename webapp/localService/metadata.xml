@@ -1,0 +1,50 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZVA0_DIGISIGN_APPROVAL_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="DigitalSign" sap:content-version="1">
+				<Key><PropertyRef Name="InvoiceNum"/><PropertyRef Name="OutputType"/></Key><Property Name="InvoiceNum" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sales Document"
+					sap:creatable="false"/><Property Name="OutputType" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Output Type"
+					sap:creatable="false"/><Property Name="BillingType" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Billing Type" sap:creatable="false"
+					sap:updatable="false"/><Property Name="BillingDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:unicode="false" sap:label="Billing Date"
+					sap:creatable="false"/><Property Name="SalesOrg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sales Org." sap:creatable="false"/><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"/><Property Name="RequestedDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:unicode="false" sap:label="Requested Date"
+					sap:creatable="false" sap:filterable="false"/><Property Name="RequestedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Requested By"
+					sap:creatable="false" sap:filterable="false"/><Property Name="ApprovedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Approved by"
+					sap:creatable="false" sap:filterable="false"/><Property Name="ApprovalDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:unicode="false" sap:label="Approved Date"
+					sap:creatable="false" sap:filterable="false"/><Property Name="SpoolNum" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Number" sap:creatable="false"
+					sap:filterable="false"/></EntityType>
+			<EntityType Name="DynamicTile" sap:content-version="1">
+				<Key><PropertyRef Name="title"/></Key><Property Name="icon" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="info" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="infoState" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="number" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="numberDigits" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="numberFactor" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="numberState" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="numberUnit" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="stateArrow" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="subtitle" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="targetParams" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="title" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Text, 40 Characters Long"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="BillingType" sap:content-version="1">
+				<Key><PropertyRef Name="BillingTypeCode"/></Key><Property Name="BillingTypeCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Billing Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false"/></EntityType>
+			<EntityType Name="PlantSearchHelp" sap:content-version="1">
+				<Key><PropertyRef Name="Werks"/></Key><Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Name2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZVA0_DIGISIGN_APPROVAL_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="DigitalSignSet" EntityType="ZVA0_DIGISIGN_APPROVAL_SRV.DigitalSign" sap:creatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="DynamicTileSet" EntityType="ZVA0_DIGISIGN_APPROVAL_SRV.DynamicTile" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="BillingTypeSet" EntityType="ZVA0_DIGISIGN_APPROVAL_SRV.BillingType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/><EntitySet Name="PlantSearchHelpSet" EntityType="ZVA0_DIGISIGN_APPROVAL_SRV.PlantSearchHelp" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+				<FunctionImport Name="DigitalSignApprove" ReturnType="ZVA0_DIGISIGN_APPROVAL_SRV.DigitalSign" EntitySet="DigitalSignSet" m:HttpMethod="POST"
+					sap:label="Approve" sap:action-for="ZVA0_DIGISIGN_APPROVAL_SRV.DigitalSign"><Parameter Name="InvoiceNum" Type="Edm.String" Mode="In" MaxLength="10"/><Parameter Name="OutputType" Type="Edm.String" Mode="In" MaxLength="4"/></FunctionImport>
+				<FunctionImport Name="DigitalSignReject" ReturnType="ZVA0_DIGISIGN_APPROVAL_SRV.DigitalSign" EntitySet="DigitalSignSet" m:HttpMethod="POST"
+					sap:label="Reject" sap:action-for="ZVA0_DIGISIGN_APPROVAL_SRV.DigitalSign"><Parameter Name="InvoiceNum" Type="Edm.String" Mode="In" MaxLength="10"/><Parameter Name="OutputType" Type="Edm.String" Mode="In" MaxLength="4"/></FunctionImport>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://cagwd.cc.deere.com:9443/sap/opu/odata/sap/ZVA0_DIGISIGN_APPROVAL_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://cagwd.cc.deere.com:9443/sap/opu/odata/sap/ZVA0_DIGISIGN_APPROVAL_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
